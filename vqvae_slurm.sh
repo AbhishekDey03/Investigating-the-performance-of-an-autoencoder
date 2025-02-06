@@ -13,7 +13,7 @@
 nvidia-smi
 
 # Set up WandB environment variables
-export WANDB_API_KEY="ae52e426af96ba6657d73e9829e28ac8891914d6"
+export WANDB_API_KEY=$WANDB_API_KEY  # Uses stored key from environment
 export WANDB_PROJECT="comparing_models"
 export WANDB_ENTITY="deya-03-the-university-of-manchester"
 
