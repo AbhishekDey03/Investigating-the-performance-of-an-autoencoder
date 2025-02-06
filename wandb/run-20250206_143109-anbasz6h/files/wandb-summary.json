@@ -1,0 +1,1 @@
+{"train/loss": 16014194688.0, "train/recon_loss": 4026.980224609375, "train/vq_loss": 16014190592.0, "train/perplexity": 1.1002382040023804, "train/bits_per_dim": 0.06455226987600327, "_timestamp": 1738853074.6800156, "_runtime": 805.4038474559784, "_step": 20000, "_wandb": {"runtime": 805}, "val/loss": 29710454671.266056}

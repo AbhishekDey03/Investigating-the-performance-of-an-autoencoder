@@ -249,3 +249,35 @@
 2025-02-06 13:45:35 INFO Running runs: ['1rg8latk']
 2025-02-06 13:51:55 INFO Agent received command: exit
 2025-02-06 13:51:55 INFO Received exit command. Killing runs and quitting.
+2025-02-06 14:31:01 INFO Running runs: []
+2025-02-06 14:31:01 INFO Agent received command: run
+2025-02-06 14:31:01 INFO Agent starting run with config:
+	architecture: AE
+	batch_size: 4
+	latent_dim: 64
+	learning_rate: 0.0002
+	num_hiddens: 256
+	num_residual_hiddens: 32
+	num_residual_layers: 2
+	save_latents: True
+2025-02-06 14:31:01 INFO About to run command: /usr/bin/env python /share/nas2_3/adey/full_models/main.py --architecture=AE --batch_size=4 --latent_dim=64 --learning_rate=0.0002 --num_hiddens=256 --num_residual_hiddens=32 --num_residual_layers=2 --save_latents=True
+2025-02-06 14:31:06 INFO Running runs: ['anbasz6h']
+2025-02-06 14:44:44 INFO Cleaning up finished run: anbasz6h
+2025-02-06 14:44:44 INFO Agent received command: exit
+2025-02-06 14:44:44 INFO Received exit command. Killing runs and quitting.
+2025-02-06 14:51:00 INFO Running runs: []
+2025-02-06 14:51:01 INFO Agent received command: run
+2025-02-06 14:51:01 INFO Agent starting run with config:
+	architecture: AE
+	batch_size: 4
+	latent_dim: 64
+	learning_rate: 0.0002
+	num_hiddens: 256
+	num_residual_hiddens: 32
+	num_residual_layers: 2
+	save_latents: True
+2025-02-06 14:51:01 INFO About to run command: /usr/bin/env python /share/nas2_3/adey/full_models/main.py --architecture=AE --batch_size=4 --latent_dim=64 --learning_rate=0.0002 --num_hiddens=256 --num_residual_hiddens=32 --num_residual_layers=2 --save_latents=True
+2025-02-06 14:51:06 INFO Running runs: ['5fahaw8g']
+2025-02-06 15:04:08 INFO Cleaning up finished run: 5fahaw8g
+2025-02-06 15:04:08 INFO Agent received command: exit
+2025-02-06 15:04:08 INFO Received exit command. Killing runs and quitting.

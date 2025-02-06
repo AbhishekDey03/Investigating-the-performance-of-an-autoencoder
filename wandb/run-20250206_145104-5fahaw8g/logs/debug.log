@@ -1,0 +1,29 @@
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Configure stats pid to 325449
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Loading settings from /home/adey/.config/wandb/settings
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Loading settings from /share/nas2_3/adey/full_models/wandb/settings
+2025-02-06 14:51:04,087 WARNING MainThread:325449 [wandb_setup.py:_flush():79] Unknown environment variable: WANDB_DATA_DIR
+2025-02-06 14:51:04,087 WARNING MainThread:325449 [wandb_setup.py:_flush():79] Unknown environment variable: WANDB_CACHE_DIR
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'project': 'comparing_models', 'entity': 'deya-03-the-university-of-manchester', 'api_key': '***REDACTED***', '_require_legacy_service': 'true', 'sweep_id': 'ho56w8w5', 'root_dir': '/share/nas2_3/adey/full_models', 'run_id': '5fahaw8g', 'sweep_param_path': '/share/nas2_3/adey/full_models/wandb/sweep-ho56w8w5/config-5fahaw8g.yaml'}
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-02-06 14:51:04,087 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': '/share/nas2_3/adey/full_models/main.py', 'program': '/share/nas2_3/adey/full_models/main.py'}
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:_log_setup():534] Logging user logs to /share/nas2_3/adey/full_models/wandb/run-20250206_145104-5fahaw8g/logs/debug.log
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:_log_setup():535] Logging internal logs to /share/nas2_3/adey/full_models/wandb/run-20250206_145104-5fahaw8g/logs/debug-internal.log
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:init():621] calling init triggers
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:init():628] wandb.init called with sweep_config: {'architecture': 'AE', 'batch_size': 4, 'latent_dim': 64, 'learning_rate': 0.0002, 'num_hiddens': 256, 'num_residual_hiddens': 32, 'num_residual_layers': 2, 'save_latents': True}
+config: {'architecture': 'AE', 'batch_size': 4, 'image_size': 150, 'num_training_updates': 20000, 'learning_rate': 0.0002, 'commitment_cost': 0.25, 'num_embeddings': 256, 'embedding_dim': 64, 'latent_dim': 64, 'num_hiddens': 128, 'num_residual_layers': 2, 'num_residual_hiddens': 32, 'dataset_path': '/share/nas2_3/adey/data/galaxy_zoo/', 'num_workers': 1, 'wandb_project': 'comparing_models', 'wandb_entity': 'your-wandb-entity-or-username'}
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:init():671] starting backend
+2025-02-06 14:51:04,088 INFO    MainThread:325449 [wandb_init.py:init():675] sending inform_init request
+2025-02-06 14:51:04,098 INFO    MainThread:325449 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-02-06 14:51:04,099 INFO    MainThread:325449 [wandb_init.py:init():688] backend started and connected
+2025-02-06 14:51:04,115 INFO    MainThread:325449 [wandb_run.py:_config_callback():1390] config_cb None None {'architecture': 'AE', 'batch_size': 4, 'latent_dim': 64, 'learning_rate': 0.0002, 'num_hiddens': 256, 'num_residual_hiddens': 32, 'num_residual_layers': 2, 'save_latents': True}
+2025-02-06 14:51:04,116 INFO    MainThread:325449 [wandb_init.py:init():783] updated telemetry
+2025-02-06 14:51:04,131 INFO    MainThread:325449 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2025-02-06 14:51:04,465 INFO    MainThread:325449 [wandb_init.py:init():867] starting run threads in backend
+2025-02-06 14:51:08,702 INFO    MainThread:325449 [wandb_run.py:_console_start():2463] atexit reg
+2025-02-06 14:51:08,702 INFO    MainThread:325449 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2025-02-06 14:51:08,702 INFO    MainThread:325449 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2025-02-06 14:51:08,702 INFO    MainThread:325449 [wandb_run.py:_redirect():2401] Redirects installed.
+2025-02-06 14:51:08,704 INFO    MainThread:325449 [wandb_init.py:init():911] run started, returning control to user process
+2025-02-06 15:04:00,483 WARNING MsgRouterThr:325449 [router.py:message_loop():77] message_loop has been closed

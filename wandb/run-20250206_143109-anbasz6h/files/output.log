@@ -1,0 +1,4 @@
+
+Starting training with architecture=VQ-VAE
+Final Validation Loss: 29710454671.266
+Model saved to /share/nas2_3/adey/astro/galaxy_out/VQ-VAE_model.pth

@@ -30,8 +30,7 @@ config = {
     "num_residual_hiddens": 32,
     "dataset_path": "/share/nas2_3/adey/data/galaxy_zoo/",
     "num_workers": 1,
-    "wandb_project": "comparing_models",
-    "wandb_entity": "your-wandb-entity-or-username"
+    "wandb_project": "comparing_models"
 }
 
 

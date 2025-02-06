@@ -1,0 +1,4 @@
+
+Starting training with architecture=AE
+Final Validation Loss: 130.137
+Model saved to /share/nas2_3/adey/astro/galaxy_out/AE_model.pth
