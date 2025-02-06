@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from residual import ResidualBlock,ResidualStack
+
 class Encoder(nn.Module):
     def __init__(self, num_hiddens, num_residual_layers, num_residual_hiddens, latent_dim):
         super(Encoder, self).__init__()
