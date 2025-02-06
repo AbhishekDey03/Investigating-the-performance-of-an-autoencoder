@@ -1,0 +1,84 @@
+2025-02-06 13:27:06,637 INFO    StreamThr :320833 [internal.py:wandb_internal():85] W&B internal server running at pid: 320833, started at: 2025-02-06 13:27:06.635005
+2025-02-06 13:27:06,641 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status
+2025-02-06 13:27:06,649 INFO    WriterThread:320833 [datastore.py:open_for_write():87] open: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/run-h1bpsjf7.wandb
+2025-02-06 13:27:06,649 DEBUG   SenderThread:320833 [sender.py:send():389] send: header
+2025-02-06 13:27:06,665 DEBUG   SenderThread:320833 [sender.py:send():389] send: run
+2025-02-06 13:27:07,020 INFO    SenderThread:320833 [dir_watcher.py:__init__():211] watching files in: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/files
+2025-02-06 13:27:07,020 INFO    SenderThread:320833 [sender.py:_start_run_threads():1157] run started: h1bpsjf7 with start time 1738848426.6344
+2025-02-06 13:27:07,037 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: run_start
+2025-02-06 13:27:11,097 DEBUG   HandlerThread:320833 [system_info.py:__init__():26] System info init
+2025-02-06 13:27:11,097 DEBUG   HandlerThread:320833 [system_info.py:__init__():41] System info init done
+2025-02-06 13:27:11,097 INFO    HandlerThread:320833 [system_monitor.py:start():194] Starting system monitor
+2025-02-06 13:27:11,098 INFO    SystemMonitor:320833 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-02-06 13:27:11,098 INFO    HandlerThread:320833 [system_monitor.py:probe():214] Collecting system info
+2025-02-06 13:27:11,101 INFO    SystemMonitor:320833 [interfaces.py:start():188] Started cpu monitoring
+2025-02-06 13:27:11,106 INFO    SystemMonitor:320833 [interfaces.py:start():188] Started disk monitoring
+2025-02-06 13:27:11,109 INFO    SystemMonitor:320833 [interfaces.py:start():188] Started gpu monitoring
+2025-02-06 13:27:11,110 INFO    SystemMonitor:320833 [interfaces.py:start():188] Started memory monitoring
+2025-02-06 13:27:11,110 INFO    SystemMonitor:320833 [interfaces.py:start():188] Started network monitoring
+2025-02-06 13:27:11,113 DEBUG   HandlerThread:320833 [system_info.py:probe():152] Probing system
+2025-02-06 13:27:11,138 DEBUG   HandlerThread:320833 [system_info.py:_probe_git():137] Probing git
+2025-02-06 13:27:11,150 DEBUG   HandlerThread:320833 [system_info.py:_probe_git():145] Probing git done
+2025-02-06 13:27:11,150 DEBUG   HandlerThread:320833 [system_info.py:probe():200] Probing system done
+2025-02-06 13:27:11,151 DEBUG   HandlerThread:320833 [system_monitor.py:probe():223] {'os': 'Linux-3.10.0-693.5.2.el7.x86_64-x86_64-with-glibc2.17', 'python': '3.9.6', 'heartbeatAt': '2025-02-06T13:27:11.113836', 'startedAt': '2025-02-06T13:27:06.615589', 'docker': None, 'cuda': None, 'args': ('--architecture=AE', '--batch_size=4', '--latent_dim=8192', '--learning_rate=0.0005', '--num_hiddens=256', '--num_residual_hiddens=32', '--num_residual_layers=2', '--save_latents=True'), 'state': 'running', 'program': '/share/nas2_3/adey/full_models/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/AbhishekDey03/Investigating-the-performance-of-an-autoencoder.git', 'commit': '5eed3879405ae258ef05dfec61b90d198abc7a7d'}, 'email': 'deya.03@outlook.com', 'root': '/share/nas2_3/adey/full_models', 'host': 'compute-0-108.local', 'username': 'adey', 'executable': '/share/nas2_3/adey/.venv/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3800.0, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}, {'current': 3800.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 15.623897552490234, 'used': 7.262969970703125}}, 'gpu': 'NVIDIA A100-PCIE-40GB', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA A100-PCIE-40GB', 'memory_total': 42949672960}, {'name': 'NVIDIA A100-PCIE-40GB', 'memory_total': 42949672960}], 'memory': {'total': 1511.0240783691406}}
+2025-02-06 13:27:11,151 INFO    HandlerThread:320833 [system_monitor.py:probe():224] Finished collecting system info
+2025-02-06 13:27:11,151 INFO    HandlerThread:320833 [system_monitor.py:probe():227] Publishing system info
+2025-02-06 13:27:11,152 INFO    HandlerThread:320833 [system_monitor.py:probe():229] Finished publishing system info
+2025-02-06 13:27:11,155 DEBUG   SenderThread:320833 [sender.py:send():389] send: files
+2025-02-06 13:27:11,155 INFO    SenderThread:320833 [sender.py:_save_file():1423] saving file wandb-metadata.json with policy now
+2025-02-06 13:27:11,240 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: python_packages
+2025-02-06 13:27:11,240 DEBUG   SenderThread:320833 [sender.py:send_request():416] send_request: python_packages
+2025-02-06 13:27:11,241 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 13:27:11,241 DEBUG   SenderThread:320833 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 13:27:11,243 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 13:27:11,417 DEBUG   SenderThread:320833 [sender.py:send():389] send: telemetry
+2025-02-06 13:27:11,662 INFO    wandb-upload_0:320833 [upload_job.py:push():130] Uploaded file /tmp/tmp50oyg6slwandb/qnozzfcd-wandb-metadata.json
+2025-02-06 13:27:11,772 INFO    Thread-12 :320833 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/files/wandb-metadata.json
+2025-02-06 13:27:11,772 INFO    Thread-12 :320833 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/files/requirements.txt
+2025-02-06 13:27:12,417 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:18,244 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:23,244 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:28,245 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:28,589 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 13:27:28,589 DEBUG   SenderThread:320833 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 13:27:28,628 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 13:27:33,753 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:38,757 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:39,783 INFO    Thread-12 :320833 [dir_watcher.py:_on_file_modified():288] file/dir modified: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/files/config.yaml
+2025-02-06 13:27:43,890 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:48,890 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:53,891 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:27:58,891 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:03,892 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:08,895 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:11,110 DEBUG   SystemMonitor:320833 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-02-06 13:28:11,111 DEBUG   SenderThread:320833 [sender.py:send():389] send: stats
+2025-02-06 13:28:14,112 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:19,114 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:24,115 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:29,115 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:34,116 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:39,116 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:41,112 DEBUG   SenderThread:320833 [sender.py:send():389] send: stats
+2025-02-06 13:28:45,112 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:50,113 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:28:55,113 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:29:00,114 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:29:05,115 DEBUG   HandlerThread:320833 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 13:29:07,219 INFO    cpu       :320833 [interfaces.py:monitor():138] Process cpu has exited.
+2025-02-06 13:29:07,220 DEBUG   SystemMonitor:320833 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-06 13:29:07,220 DEBUG   SystemMonitor:320833 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-06 13:29:07,225 DEBUG   SenderThread:320833 [sender.py:send():389] send: stats
+2025-02-06 13:29:08,892 WARNING StreamThr :320833 [internal.py:is_dead():413] Internal process exiting, parent pid 320820 disappeared
+2025-02-06 13:29:08,892 ERROR   StreamThr :320833 [internal.py:wandb_internal():151] Internal process shutdown.
+2025-02-06 13:29:09,225 INFO    HandlerThread:320833 [handler.py:finish():874] shutting down handler
+2025-02-06 13:29:09,225 INFO    HandlerThread:320833 [system_monitor.py:finish():203] Stopping system monitor
+2025-02-06 13:29:09,226 INFO    HandlerThread:320833 [interfaces.py:finish():200] Joined cpu monitor
+2025-02-06 13:29:09,226 INFO    HandlerThread:320833 [interfaces.py:finish():200] Joined disk monitor
+2025-02-06 13:29:09,226 INFO    HandlerThread:320833 [interfaces.py:finish():200] Joined gpu monitor
+2025-02-06 13:29:09,227 INFO    HandlerThread:320833 [interfaces.py:finish():200] Joined memory monitor
+2025-02-06 13:29:09,227 INFO    HandlerThread:320833 [interfaces.py:finish():200] Joined network monitor
+2025-02-06 13:29:09,227 INFO    WriterThread:320833 [datastore.py:close():296] close: /share/nas2_3/adey/full_models/wandb/run-20250206_132706-h1bpsjf7/run-h1bpsjf7.wandb
+2025-02-06 13:29:09,228 INFO    SenderThread:320833 [sender.py:finish():1602] shutting down sender
+2025-02-06 13:29:09,228 INFO    SenderThread:320833 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-02-06 13:29:09,785 INFO    MainThread:320833 [internal.py:handle_exit():75] Internal process exited

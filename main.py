@@ -1,187 +1,215 @@
 import os
-import torch
-import wandb
 import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
 import torch.nn.functional as F
-from torch.optim import Adam
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.utils.data import DataLoader
-from torchvision import transforms
 from torch.distributions import Normal, kl_divergence, MultivariateNormal
-from datasets import RGZ108k
-from encoders import Encoder
-from decoders import AEDecoder, VAEDecoder
-from vectorquantizer import VectorQuantizer
-from base_models import BaseAutoencoder
-import plotting_functions
+from torchvision import transforms
+import wandb
 
-# Configuration
+from decoders import Decoder
+from encoders import Encoder
+from vectorquantizer import VectorQuantizer
+from unified_model import UnifiedModel
+
 config = {
-    "architecture": "AE",  # Can be 'AE', 'VAE', or 'VQ-VAE'
+    "architecture": "VQ-VAE",          # Choose: 'AE', 'VAE', or 'VQ-VAE'
     "batch_size": 4,
     "image_size": 150,
-    "num_training_updates": 10000,
+    "num_training_updates": 20000,
     "learning_rate": 2e-4,
-    "latent_dim": 512,
+    "commitment_cost": 0.25,          # For VQ-VAE
+    "num_embeddings": 256,            # For VQ-VAE
+    "embedding_dim": 64,             # For VQ-VAE or AE dimension
+    "latent_dim": 64,                # For VAE (channels of mean, logvar each = 64)
     "num_hiddens": 128,
     "num_residual_layers": 2,
     "num_residual_hiddens": 32,
-    "num_embeddings": 256,
-    "commitment_cost": 0.25,
     "dataset_path": "/share/nas2_3/adey/data/galaxy_zoo/",
-    "wandb_dir": "/share/nas2_3/adey/astro/wandb/",
-    "save_dir": "/share/nas2_3/adey/astro/galaxy_out/",
-    "save_latents_path": "/share/nas2_3/adey/astro/latents/"
+    "num_workers": 1,
+    "wandb_project": "comparing_models",
+    "wandb_entity": "your-wandb-entity-or-username"
 }
 
-wandb.init(config=config, project="comparing_models", entity="deya-03-the-university-of-manchester")
 
-# Load Dataset
-transform = transforms.Compose([
-    transforms.Resize((config["image_size"], config["image_size"])),
-    transforms.Grayscale(num_output_channels=1),
-    transforms.ToTensor(),
-    transforms.Normalize((0.0031,), (0.0352,))
-])
+def main():
+    # Initialize W&B
+    wandb.init(
+        project=config["wandb_project"],
+        entity=config["wandb_entity"],
+        config=config
+    )
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Create dataset & dataloaders
+    from datasets import RGZ108k  # Your RGZ108k dataset class
+    transform = transforms.Compose([
+        transforms.Resize((config["image_size"], config["image_size"])),
+        transforms.Grayscale(num_output_channels=1),
+        transforms.ToTensor(),
+        # These normalization stats come from your code, but adjust as needed
+        transforms.Normalize((0.0031,), (0.0352,))
+    ])
 
-train_dataset = RGZ108k(root=config["dataset_path"], train=True, transform=transform)
-valid_dataset = RGZ108k(root=config["dataset_path"], train=False, transform=transform)
+    train_dataset = RGZ108k(root=config["dataset_path"], train=True, transform=transform)
+    valid_dataset = RGZ108k(root=config["dataset_path"], train=False, transform=transform)
 
-train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True, num_workers=2)
-valid_loader = DataLoader(valid_dataset, batch_size=config["batch_size"], shuffle=False, num_workers=2)
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=config["batch_size"],
+        shuffle=True,
+        num_workers=config["num_workers"]
+    )
+    valid_loader = DataLoader(
+        valid_dataset,
+        batch_size=config["batch_size"],
+        shuffle=False,
+        num_workers=config["num_workers"]
+    )
 
-# Initialize Model
-encoder = Encoder(config["num_hiddens"], config["num_residual_layers"], config["num_residual_hiddens"], config["latent_dim"], variant=config["architecture"])
+    # Initialize model
+    model = UnifiedModel(config).to(device)
 
-vq_layer = None
-if config["architecture"] == "VQ-VAE":
-    vq_layer = VectorQuantizer(config["num_embeddings"], config["latent_dim"], config["commitment_cost"])
+    # Optimizer & Scheduler
+    optimizer = optim.Adam(model.parameters(), lr=config["learning_rate"])
+    scheduler = CosineAnnealingLR(optimizer, T_max=config["num_training_updates"], eta_min=1e-6)
 
-decoder_type = config["architecture"]
-if decoder_type == "AE":
-    decoder = AEDecoder(latent_dim=config["latent_dim"], num_hiddens=config["num_hiddens"], num_residual_layers=config["num_residual_layers"], num_residual_hiddens=config["num_residual_hiddens"])
-elif decoder_type in ["VAE", "VQ-VAE"]:
-    decoder = VAEDecoder(latent_dim=config["latent_dim"], num_hiddens=config["num_hiddens"], num_residual_layers=config["num_residual_layers"], num_residual_hiddens=config["num_residual_hiddens"])
+    # Training loop
+    global_step = 0
+    model.train()
+    print(f"Starting training with architecture={config['architecture']}")
 
-model = BaseAutoencoder(encoder, decoder_type=decoder_type, vq_layer=vq_layer, latent_dim=config["latent_dim"], num_hiddens=config["num_hiddens"], num_residual_layers=config["num_residual_layers"], num_residual_hiddens=config["num_residual_hiddens"]).to(device)
+    while global_step < config["num_training_updates"]:
+        for images, _ in train_loader:
+            images = images.to(device)
+            optimizer.zero_grad()
 
-# Optimizer and Scheduler
-optimizer = Adam(list(model.encoder.parameters()) + list(model.decoder.parameters()), lr=config["learning_rate"])
-scheduler = CosineAnnealingLR(optimizer, T_max=config["num_training_updates"], eta_min=1e-6)
+            if config["architecture"] == "AE":
+                # AE forward pass: recon = model(images)
+                recon = model(images)
+                recon_loss = F.mse_loss(recon, images, reduction='sum')
+                total_loss = recon_loss
+                bits_per_dim = recon_loss / (images.size(0) * config["image_size"]**2 * np.log(2))
 
-# Training Loop
-model.train()
-global_step = 0
-print("starting training")
-for epoch in range(10):
-    for batch_idx, (images, _) in enumerate(train_loader):
-        if global_step >= config["num_training_updates"]:
-            break
+                total_loss.backward()
+                optimizer.step()
 
-        images = images.to(device)
-        reconstructed, vq_loss = model(images)
-        
-        if config["architecture"] == "VAE":
-            mean, logvar = model.encoder(images)
-            std = torch.exp(0.5 * logvar)
-            eps = torch.randn_like(std)
-            z = mean + eps * std
-            recon_loss = F.mse_loss(model.decoder(z), images, reduction='sum')
-            kl_div = kl_divergence(Normal(mean, std), Normal(torch.zeros_like(mean), torch.ones_like(std))).sum()
-            total_loss = recon_loss + kl_div
-        elif config["architecture"] == "VQ-VAE":
-            z = model.encoder(images)
-            quantized, vq_loss, _ = vq_layer(z)
-            recon_loss = F.mse_loss(model.decoder(quantized), images, reduction='sum')
-            total_loss = recon_loss + vq_loss
-        else:  # AE
-            recon_loss = F.mse_loss(reconstructed, images, reduction='sum')
-            total_loss = recon_loss
+                # Logging
+                wandb.log({
+                    "train/loss": total_loss.item(),
+                    "train/recon_loss": recon_loss.item(),
+                    "train/bits_per_dim": bits_per_dim.item()
+                }, step=global_step)
 
-        # Compute bits per dimension (bpd)
-        bpd = recon_loss / (images.size(0) * config["image_size"] * config["image_size"] * np.log(2))
-        
-        optimizer.zero_grad()
-        total_loss.backward()
-        optimizer.step()
-        scheduler.step()
+            elif config["architecture"] == "VQ-VAE":
+                # VQ-VAE forward pass: recon, vq_loss, perplexity = model(images)
+                recon, vq_loss, perplexity = model(images)
+                # sum MSE
+                recon_loss = F.mse_loss(recon, images, reduction='sum')
+                total_loss = recon_loss + vq_loss
+                bits_per_dim = recon_loss / (images.size(0) * config["image_size"]**2 * np.log(2))
 
-        wandb.log({"train/loss": total_loss.item(), "train/recon_loss": recon_loss.item()}, step=global_step)
-        wandb.log({"train/bpd": bpd.item()}, step=global_step)
-        if config["architecture"] == "VQ-VAE":
-            wandb.log({"train/vq_loss": vq_loss.item()}, step=global_step)
-        if config["architecture"] == "VAE":
-            wandb.log({"train/kl_div": kl_div.item()}, step=global_step)
+                total_loss.backward()
+                optimizer.step()
 
-        if global_step % 100 == 0:
-            print(f"train/loss: {total_loss.item()},train/bpd: {bpd.item()}")
+                wandb.log({
+                    "train/loss": total_loss.item(),
+                    "train/recon_loss": recon_loss.item(),
+                    "train/vq_loss": vq_loss.item(),
+                    "train/perplexity": perplexity.item(),
+                    "train/bits_per_dim": bits_per_dim.item()
+                }, step=global_step)
 
-        
-        if global_step % 1000 == 0:
-            model.eval()
-            val_total_loss, val_recon_loss, val_vq_loss, val_kl_div = [], [], [], []
-            with torch.no_grad():
-                for val_images, _ in valid_loader:
-                    val_images = val_images.to(device)
-                    val_recon, _ = model(val_images)
-                    if config["architecture"] == "VAE":
-                        mean, logvar = model.encoder(val_images)
-                        std = torch.exp(0.5 * logvar)
-                        eps = torch.randn_like(std)
-                        z = mean + eps * std
-                        recon_loss = F.mse_loss(model.decoder(z), val_images, reduction='sum')
-                        kl_div = kl_divergence(Normal(mean, std), Normal(torch.zeros_like(mean), torch.ones_like(std))).sum()
-                        total_loss = recon_loss + kl_div
-                        val_kl_div.append(kl_div.item())
-                    elif config["architecture"] == "VQ-VAE":
-                        z = model.encoder(val_images)
-                        quantized, vq_loss, _ = vq_layer(z)
-                        recon_loss = F.mse_loss(model.decoder(quantized), val_images, reduction='sum')
-                        total_loss = recon_loss + vq_loss
-                        val_vq_loss.append(vq_loss.item())
-                    else:  # AE
-                        recon_loss = F.mse_loss(val_recon, val_images, reduction='sum')
-                        total_loss = recon_loss
-                    
-                    val_recon_loss.append(recon_loss.item())
-                    val_total_loss.append(total_loss.item())
-            avg_val_loss = np.mean(val_total_loss)
-            avg_val_recon_loss = np.mean(val_recon_loss)
-            avg_val_bpd = np.mean(val_bpd_list)
-            wandb.log({"val/bpd": avg_val_bpd}, step=global_step)
-            wandb.log({"val/loss": avg_val_loss, "val/recon_loss": avg_val_recon_loss}, step=global_step)
+            else:  # VAE
+                # VAE forward pass: recon, mean, logvar = model(images)
+                recon, mean, logvar = model(images)
 
-            model.train()
-        
-        global_step += 1
+                # --- Reconstruction Loss: Multivariate Gaussian NLL as in your code ---
+                # Flatten for each sample
+                B = images.size(0)
+                x_recon_flat = recon.view(B, -1)
+                x_flat = images.view(B, -1)
 
-torch.save(model.state_dict(), os.path.join(config["save_dir"], f"{config["architecture"]}_model.pth"))
+                # Identity covariance
+                scale = torch.ones_like(x_recon_flat)
+                scale_tril = torch.diag_embed(scale)
+                
+                mvn = MultivariateNormal(loc=x_recon_flat, scale_tril=scale_tril)
+                recon_loss = -mvn.log_prob(x_flat).sum()  # sum over the batch
 
-# Generate and display images
-with torch.no_grad():
-    images, _ = next(iter(valid_loader)) 
-    images = images.to(device)
-    
-    mean, logvar = encoder(images)
-    std = torch.exp(0.5 * logvar)
-    eps = torch.randn_like(std)
-    z = mean + eps * std
-    x_recon = decoder(z)
+                # KL Divergence
+                q_z_x = Normal(mean, torch.exp(0.5 * logvar))
+                p_z = Normal(torch.zeros_like(mean), torch.ones_like(logvar))
+                kl_div_value = kl_divergence(q_z_x, p_z).sum() / B
 
-display_images(original_images=images, reconstructed_images=x_recon, step=i)
+                total_loss = recon_loss + kl_div_value
+                total_loss.backward()
+                optimizer.step()
 
-# Save the Encoder and Decoder
-save_directory = '/share/nas2_3/adey/astro/galaxy_out/'
-model_path = os.path.join(save_directory, 'vae_model.pth')
-torch.save({
-    'encoder_state_dict': encoder.state_dict(),
-    'decoder_state_dict': decoder.state_dict(),
-}, model_path)
+                # Bits per dimension
+                bits_per_dim = recon_loss / (B * config["image_size"]**2 * np.log(2))
 
-model_artifact = wandb.Artifact('vae_model', type='model')
-model_artifact.add_file(model_path)
-wandb.log_artifact(model_artifact)
+                wandb.log({
+                    "train/loss": total_loss.item(),
+                    "train/recon_loss": recon_loss.item(),
+                    "train/kl_div": kl_div_value.item(),
+                    "train/bits_per_dim": bits_per_dim.item()
+                }, step=global_step)
 
-print("Model and training metrics saved successfully.")
+            scheduler.step()
+            global_step += 1
+
+            # Simple stopping condition
+            if global_step >= config["num_training_updates"]:
+                break
+
+    # ==============================
+    # Validation (optional example)
+    # ==============================
+    model.eval()
+    with torch.no_grad():
+        val_losses = []
+        for images, _ in valid_loader:
+            images = images.to(device)
+            if config["architecture"] == "AE":
+                recon = model(images)
+                recon_loss = F.mse_loss(recon, images, reduction='sum')
+                val_losses.append(recon_loss.item())
+            elif config["architecture"] == "VQ-VAE":
+                recon, vq_loss, _ = model(images)
+                recon_loss = F.mse_loss(recon, images, reduction='sum')
+                total_loss = recon_loss + vq_loss
+                val_losses.append(total_loss.item())
+            else:  # VAE
+                recon, mean, logvar = model(images)
+                B = images.size(0)
+                x_recon_flat = recon.view(B, -1)
+                x_flat = images.view(B, -1)
+                scale = torch.ones_like(x_recon_flat)
+                scale_tril = torch.diag_embed(scale)
+                mvn = MultivariateNormal(loc=x_recon_flat, scale_tril=scale_tril)
+                recon_loss = -mvn.log_prob(x_flat).sum()
+                q_z_x = Normal(mean, torch.exp(0.5 * logvar))
+                p_z = Normal(torch.zeros_like(mean), torch.ones_like(logvar))
+                kl_div_value = kl_divergence(q_z_x, p_z).sum() / B
+                total_loss = recon_loss + kl_div_value
+                val_losses.append(total_loss.item())
+
+        avg_val_loss = np.mean(val_losses)
+        wandb.log({"val/loss": avg_val_loss}, step=global_step)
+        print(f"Final Validation Loss: {avg_val_loss:.3f}")
+
+    # ==============================
+    # Save model
+    # ==============================
+    save_dir = "/share/nas2_3/adey/astro/galaxy_out"
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, f"{config['architecture']}_model.pth")
+    torch.save(model.state_dict(), save_path)
+    print(f"Model saved to {save_path}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,18 @@
+
+starting training
+Traceback (most recent call last):
+  File "/share/nas2_3/adey/full_models/main.py", line 84, in <module>
+    reconstructed, vq_loss = model(images)
+  File "/share/nas2_3/adey/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/nas2_3/adey/full_models/base_models.py", line 32, in forward
+    z = self.encoder(x)  # Get latent representation
+  File "/share/nas2_3/adey/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/nas2_3/adey/full_models/encoders.py", line 56, in forward
+    x = self.fc_mu(x)  # Compress to a low-dimensional vector
+  File "/share/nas2_3/adey/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/nas2_3/adey/.venv/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (4x175232 and 720000x512)

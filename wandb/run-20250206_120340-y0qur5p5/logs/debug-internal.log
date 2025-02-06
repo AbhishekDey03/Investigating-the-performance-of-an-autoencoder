@@ -147,3 +147,157 @@
 2025-02-06 12:11:29,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: keepalive
 2025-02-06 12:11:29,965 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
 2025-02-06 12:11:30,966 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:36,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:39,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:11:41,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:44,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:11:44,926 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:11:45,405 DEBUG   SenderThread:454531 [sender.py:send():389] send: stats
+2025-02-06 12:11:47,406 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:49,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:11:52,927 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:58,927 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:11:59,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:11:59,926 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:11:59,965 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:12:04,155 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:09,929 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:14,236 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:12:14,926 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:12:14,926 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:12:15,153 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:15,406 DEBUG   SenderThread:454531 [sender.py:send():389] send: stats
+2025-02-06 12:12:20,407 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:24,235 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:12:25,310 INFO    Thread-12 :454531 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/output.log
+2025-02-06 12:12:25,884 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:25,911 DEBUG   SenderThread:454531 [sender.py:send():389] send: exit
+2025-02-06 12:12:25,912 INFO    SenderThread:454531 [sender.py:send_exit():577] handling exit code: 1
+2025-02-06 12:12:25,912 INFO    SenderThread:454531 [sender.py:send_exit():579] handling runtime: 524
+2025-02-06 12:12:25,912 INFO    SenderThread:454531 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2025-02-06 12:12:25,913 INFO    SenderThread:454531 [sender.py:send_exit():585] send defer
+2025-02-06 12:12:25,913 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,913 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 0
+2025-02-06 12:12:25,913 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,913 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 0
+2025-02-06 12:12:25,913 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 1
+2025-02-06 12:12:25,913 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,913 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 1
+2025-02-06 12:12:25,913 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,913 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 1
+2025-02-06 12:12:25,913 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 2
+2025-02-06 12:12:25,913 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,913 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 2
+2025-02-06 12:12:25,913 INFO    HandlerThread:454531 [system_monitor.py:finish():203] Stopping system monitor
+2025-02-06 12:12:25,913 DEBUG   SystemMonitor:454531 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-06 12:12:25,913 DEBUG   SystemMonitor:454531 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-06 12:12:25,919 INFO    HandlerThread:454531 [interfaces.py:finish():200] Joined cpu monitor
+2025-02-06 12:12:25,919 INFO    HandlerThread:454531 [interfaces.py:finish():200] Joined disk monitor
+2025-02-06 12:12:25,956 INFO    HandlerThread:454531 [interfaces.py:finish():200] Joined gpu monitor
+2025-02-06 12:12:25,956 INFO    HandlerThread:454531 [interfaces.py:finish():200] Joined memory monitor
+2025-02-06 12:12:25,956 INFO    HandlerThread:454531 [interfaces.py:finish():200] Joined network monitor
+2025-02-06 12:12:25,956 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,956 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 2
+2025-02-06 12:12:25,956 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 3
+2025-02-06 12:12:25,956 DEBUG   SenderThread:454531 [sender.py:send():389] send: stats
+2025-02-06 12:12:25,957 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,957 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 3
+2025-02-06 12:12:25,957 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,957 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 3
+2025-02-06 12:12:25,957 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 4
+2025-02-06 12:12:25,957 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,957 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 4
+2025-02-06 12:12:25,957 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,957 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 4
+2025-02-06 12:12:25,957 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 5
+2025-02-06 12:12:25,957 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,957 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 5
+2025-02-06 12:12:25,957 DEBUG   SenderThread:454531 [sender.py:send():389] send: summary
+2025-02-06 12:12:25,958 INFO    SenderThread:454531 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2025-02-06 12:12:25,958 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,958 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 5
+2025-02-06 12:12:25,958 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 6
+2025-02-06 12:12:25,958 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,958 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 6
+2025-02-06 12:12:25,958 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,958 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 6
+2025-02-06 12:12:25,958 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 7
+2025-02-06 12:12:25,958 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:12:25,958 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:25,958 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 7
+2025-02-06 12:12:25,959 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:25,959 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 7
+2025-02-06 12:12:26,311 INFO    Thread-12 :454531 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/wandb-summary.json
+2025-02-06 12:12:26,890 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 8
+2025-02-06 12:12:26,890 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:26,890 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 8
+2025-02-06 12:12:26,890 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:26,890 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 8
+2025-02-06 12:12:26,891 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 9
+2025-02-06 12:12:26,891 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:26,891 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 9
+2025-02-06 12:12:26,891 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:26,891 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 9
+2025-02-06 12:12:26,891 INFO    SenderThread:454531 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-02-06 12:12:26,912 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:12:27,312 INFO    Thread-12 :454531 [dir_watcher.py:_on_file_modified():288] file/dir modified: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/output.log
+2025-02-06 12:12:27,313 INFO    SenderThread:454531 [dir_watcher.py:finish():388] scan: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files
+2025-02-06 12:12:27,313 INFO    SenderThread:454531 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/config.yaml config.yaml
+2025-02-06 12:12:27,314 INFO    SenderThread:454531 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/wandb-metadata.json wandb-metadata.json
+2025-02-06 12:12:27,320 INFO    SenderThread:454531 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/requirements.txt requirements.txt
+2025-02-06 12:12:27,320 INFO    SenderThread:454531 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/output.log output.log
+2025-02-06 12:12:27,321 INFO    SenderThread:454531 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/wandb-summary.json wandb-summary.json
+2025-02-06 12:12:27,321 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 10
+2025-02-06 12:12:27,321 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:12:27,321 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:27,322 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 10
+2025-02-06 12:12:27,322 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:27,322 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 10
+2025-02-06 12:12:27,322 INFO    SenderThread:454531 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-06 12:12:27,904 INFO    wandb-upload_1:454531 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/requirements.txt
+2025-02-06 12:12:27,906 INFO    wandb-upload_2:454531 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/output.log
+2025-02-06 12:12:27,907 INFO    wandb-upload_3:454531 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/wandb-summary.json
+2025-02-06 12:12:27,909 INFO    wandb-upload_0:454531 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/files/config.yaml
+2025-02-06 12:12:27,913 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:12:27,913 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:12:28,110 INFO    Thread-11 :454531 [sender.py:transition_state():605] send defer: 11
+2025-02-06 12:12:28,110 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:28,111 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 11
+2025-02-06 12:12:28,111 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:28,111 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 11
+2025-02-06 12:12:28,111 INFO    SenderThread:454531 [file_pusher.py:join():175] waiting for file pusher
+2025-02-06 12:12:28,112 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 12
+2025-02-06 12:12:28,112 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:28,112 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 12
+2025-02-06 12:12:28,112 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:28,112 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 12
+2025-02-06 12:12:28,112 INFO    SenderThread:454531 [file_stream.py:finish():601] file stream finish called
+2025-02-06 12:12:28,578 INFO    SenderThread:454531 [file_stream.py:finish():605] file stream finish is done
+2025-02-06 12:12:28,578 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 13
+2025-02-06 12:12:28,578 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:28,578 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 13
+2025-02-06 12:12:28,579 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:28,579 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 13
+2025-02-06 12:12:28,579 INFO    SenderThread:454531 [sender.py:transition_state():605] send defer: 14
+2025-02-06 12:12:28,579 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:12:28,579 INFO    HandlerThread:454531 [handler.py:handle_request_defer():184] handle defer: 14
+2025-02-06 12:12:28,580 DEBUG   SenderThread:454531 [sender.py:send():389] send: final
+2025-02-06 12:12:28,580 DEBUG   SenderThread:454531 [sender.py:send():389] send: footer
+2025-02-06 12:12:28,580 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:12:28,580 INFO    SenderThread:454531 [sender.py:send_request_defer():601] handle sender defer: 14
+2025-02-06 12:12:28,582 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:12:28,582 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:12:28,582 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: get_summary
+2025-02-06 12:12:28,582 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: sampled_history
+2025-02-06 12:12:28,582 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:12:28,583 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:12:28,583 DEBUG   SenderThread:454531 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:12:28,583 INFO    MainThread:454531 [wandb_run.py:_footer_history_summary_info():3975] rendering history
+2025-02-06 12:12:28,584 INFO    MainThread:454531 [wandb_run.py:_footer_history_summary_info():4007] rendering summary
+2025-02-06 12:12:28,584 INFO    MainThread:454531 [wandb_run.py:_footer_sync_info():3934] logging synced files
+2025-02-06 12:12:28,584 DEBUG   HandlerThread:454531 [handler.py:handle_request():158] handle_request: shutdown
+2025-02-06 12:12:28,585 INFO    HandlerThread:454531 [handler.py:finish():874] shutting down handler
+2025-02-06 12:12:29,583 INFO    WriterThread:454531 [datastore.py:close():296] close: /share/nas2_3/adey/full_models/wandb/run-20250206_120340-y0qur5p5/run-y0qur5p5.wandb
+2025-02-06 12:12:29,583 INFO    SenderThread:454531 [sender.py:finish():1602] shutting down sender
+2025-02-06 12:12:29,584 INFO    SenderThread:454531 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-06 12:12:29,584 INFO    SenderThread:454531 [file_pusher.py:join():175] waiting for file pusher

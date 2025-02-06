@@ -1,46 +1,40 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from residual import ResidualBlock,ResidualStack
+from residual import ResidualStack
+
 class Encoder(nn.Module):
-    def __init__(self, num_hiddens, num_residual_layers, num_residual_hiddens, latent_dim, variant='AE'):
+    def __init__(self, num_hiddens, num_residual_layers, num_residual_hiddens):
         """
-        variant: 'AE', 'VAE', or 'VQ-VAE' - determines how to process latent space
+        Returns a feature map of shape [B, num_hiddens, H/4, W/4] after 2 strided convs.
         """
         super(Encoder, self).__init__()
-        self.variant = variant
-
-        self.conv1 = nn.Conv2d(1, num_hiddens // 2, kernel_size=4, stride=2, padding=1)
-        self.conv2 = nn.Conv2d(num_hiddens // 2, num_hiddens, kernel_size=4, stride=2, padding=1)
-        self.conv3 = nn.Conv2d(num_hiddens, num_hiddens, kernel_size=3, stride=1, padding=1)
+        self.conv1 = nn.Conv2d(
+            in_channels=1, 
+            out_channels=num_hiddens // 2, 
+            kernel_size=4, 
+            stride=2, 
+            padding=1
+        )
+        self.conv2 = nn.Conv2d(
+            in_channels=num_hiddens // 2, 
+            out_channels=num_hiddens, 
+            kernel_size=4, 
+            stride=2, 
+            padding=1
+        )
+        self.conv3 = nn.Conv2d(
+            in_channels=num_hiddens, 
+            out_channels=num_hiddens, 
+            kernel_size=3, 
+            stride=1, 
+            padding=1
+        )
         self.residual_stack = ResidualStack(num_hiddens, num_residual_layers, num_residual_hiddens)
-
-        # Compression MLP for AE (small latent vector)
-        if variant == 'AE':
-            self.latent_dim = latent_dim
-            self.flatten = nn.Flatten()
-            self.fc_mu = nn.Linear(num_hiddens * 38 * 38, latent_dim)
-        elif variant == 'VAE':
-            self.pre_latent_conv = nn.Conv2d(num_hiddens, 2 * latent_dim, kernel_size=1, stride=1)
-        else:
-            self.pre_latent_conv = nn.Conv2d(num_hiddens, latent_dim, kernel_size=1, stride=1)
 
     def forward(self, x):
         x = F.relu(self.conv1(x))
         x = F.relu(self.conv2(x))
         x = self.conv3(x)
         x = self.residual_stack(x)
-
-        if self.variant == 'AE':
-            x = self.flatten(x)
-            x = self.fc_mu(x)  # Compress to a low-dimensional vector
-            return x
-
-        elif self.variant == 'VAE':
-            x = self.pre_latent_conv(x)
-            mean, logvar = torch.chunk(x, 2, dim=1)
-            return mean, logvar
-        else:
-            return self.pre_latent_conv(x)
-
- 
+        return x

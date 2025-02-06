@@ -32,7 +32,7 @@ python --version
 /share/nas2_3/adey/.venv/bin/python --version
 
 # Define paths
-PYTHON_SCRIPT="/share/nas2_3/adey/full_models/train_ae.py"
+PYTHON_SCRIPT="/share/nas2_3/adey/full_models/main.py"
 SWEEP_CONFIG="/share/nas2_3/adey/full_models/config_ae_wandb.yaml"
 
 # Initialize wandb sweep

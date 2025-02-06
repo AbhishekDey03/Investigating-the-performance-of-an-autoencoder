@@ -1,0 +1,16 @@
+wandb_version: 1
+
+batch_size:
+  value: 4
+latent_dim:
+  value: 8192
+learning_rate:
+  value: 0.0005
+num_hiddens:
+  value: 256
+num_residual_hiddens:
+  value: 32
+num_residual_layers:
+  value: 2
+save_latents:
+  value: true

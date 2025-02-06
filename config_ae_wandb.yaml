@@ -1,6 +1,6 @@
 project: comparing_models
 entity: deya-03-the-university-of-manchester
-program: /share/nas2_3/adey/full_models/train_ae.py
+program: /share/nas2_3/adey/full_models/main.py
 
 metric:
   name: train/total_loss_per_100
@@ -8,8 +8,10 @@ metric:
 
 method: grid
 parameters:
+  architecture:
+    values: ["AE"]
   latent_dim:
-    values: [8192, 4096, 2048] 
+    values: [64] 
   num_hiddens:
     values: [256]
   num_residual_layers:
@@ -17,7 +19,7 @@ parameters:
   num_residual_hiddens:
     values: [32]
   learning_rate:
-    values: [0.0001, 0.0002, 0.0005]
+    values: [0.0002]
   batch_size:
     values: [4]  
   save_latents:
