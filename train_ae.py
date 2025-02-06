@@ -7,8 +7,8 @@ from torch.optim import Adam
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.utils.data import DataLoader
 from datasets import RGZ108k
-from encoder import Encoder
-from decoder import AEDecoder
+from encoders import Encoder
+from decoders import AEDecoder
 from base_models import BaseAutoencoder
 import plotting_functions
 

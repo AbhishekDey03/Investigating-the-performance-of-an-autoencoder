@@ -1,0 +1,140 @@
+{
+    "os": "Linux-3.10.0-693.5.2.el7.x86_64-x86_64-with-glibc2.17",
+    "python": "3.9.6",
+    "heartbeatAt": "2025-02-06T11:54:40.695313",
+    "startedAt": "2025-02-06T11:54:35.962677",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--batch_size=4",
+        "--latent_dim=8192",
+        "--learning_rate=0.0001",
+        "--num_hiddens=256",
+        "--num_residual_hiddens=32",
+        "--num_residual_layers=2",
+        "--save_latents=True"
+    ],
+    "state": "running",
+    "program": "/share/nas2_3/adey/full_models/train_ae.py",
+    "codePathLocal": "train_ae.py",
+    "codePath": "train_ae.py",
+    "git": {
+        "remote": "https://github.com/AbhishekDey03/Investigating-the-performance-of-an-autoencoder.git",
+        "commit": "96befa9a5344ecf68fd91af06b2174dff6ab4f97"
+    },
+    "email": "deya.03@outlook.com",
+    "root": "/share/nas2_3/adey/full_models",
+    "host": "compute-0-105.local",
+    "username": "adey",
+    "executable": "/share/nas2_3/adey/.venv/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3800.0,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3800.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 15.623897552490234,
+            "used": 7.253841400146484
+        }
+    },
+    "gpu": "NVIDIA A100-PCIE-40GB",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100-PCIE-40GB",
+            "memory_total": 42949672960
+        },
+        {
+            "name": "NVIDIA A100-PCIE-40GB",
+            "memory_total": 42949672960
+        }
+    ],
+    "memory": {
+        "total": 1511.1678848266602
+    }
+}

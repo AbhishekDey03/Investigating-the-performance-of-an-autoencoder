@@ -7,8 +7,8 @@ from torch.optim import Adam
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.utils.data import DataLoader
 from datasets import RGZ108k
-from encoder import Encoder
-from decoder import VAEDecoder  # VAE decoder works for VQ-VAE
+from encoders import Encoder
+from decoders import VAEDecoder  # VAE decoder works for VQ-VAE
 from vectorquantizer import VectorQuantizer
 from base_models import BaseAutoencoder
 import plotting_functions

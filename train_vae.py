@@ -12,8 +12,8 @@ from datasets import RGZ108k
 import wandb
 import os
 
-from encoder_vae import Encoder
-from decoder_vae import Decoder
+from encoders import Encoder
+from decoders import VAEDecoder
 from residual import ResidualBlock, ResidualStack
 from plotting_functions import denormalize, display_images
 import plotting_functions

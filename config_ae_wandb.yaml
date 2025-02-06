@@ -24,7 +24,3 @@ parameters:
     values: [True]  
 
 max_runs: 50  
-
-parameter_constraints:
-  - "(latent_dim * log2(latent_dim)) <= 3072"
-``
