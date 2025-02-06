@@ -80,3 +80,225 @@
 2025-02-06 11:57:30,696 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
 2025-02-06 11:57:35,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
 2025-02-06 11:57:40,695 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 11:57:41,695 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:57:46,696 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:57:51,696 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:57:56,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:01,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:06,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:10,695 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 11:58:12,696 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:17,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:22,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:27,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:32,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:37,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:40,696 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 11:58:43,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:48,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:53,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:58:58,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:03,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:08,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:10,696 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 11:59:14,697 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:19,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:24,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:29,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:34,704 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:39,704 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:40,697 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 11:59:45,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:50,698 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 11:59:55,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:00,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:05,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:10,698 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:00:11,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:16,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:21,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:26,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:31,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:36,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:40,698 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:00:42,699 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:47,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:52,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:00:57,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:02,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:07,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:10,699 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:01:13,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:18,700 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:23,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:28,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:33,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:38,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:40,700 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:01:44,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:49,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:54,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:01:59,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:04,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:09,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:10,700 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:02:15,701 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:20,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:25,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:29,273 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: keepalive
+2025-02-06 12:02:30,703 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:36,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:39,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:02:40,701 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:02:41,702 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:44,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:02:44,274 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:02:47,440 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:49,273 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:02:53,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:59,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:02:59,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:02:59,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:02:59,275 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:03:05,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:03:10,275 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:03:10,702 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:03:13,115 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:03:14,274 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: stop_status
+2025-02-06 12:03:14,274 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: stop_status
+2025-02-06 12:03:15,442 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:03:20,442 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:03:23,115 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:03:24,654 INFO    Thread-12 :453996 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/output.log
+2025-02-06 12:03:24,806 DEBUG   SenderThread:453996 [sender.py:send():389] send: exit
+2025-02-06 12:03:24,806 INFO    SenderThread:453996 [sender.py:send_exit():577] handling exit code: 1
+2025-02-06 12:03:24,806 INFO    SenderThread:453996 [sender.py:send_exit():579] handling runtime: 528
+2025-02-06 12:03:24,807 INFO    SenderThread:453996 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2025-02-06 12:03:24,808 INFO    SenderThread:453996 [sender.py:send_exit():585] send defer
+2025-02-06 12:03:24,808 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,808 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 0
+2025-02-06 12:03:24,808 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,808 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 0
+2025-02-06 12:03:24,808 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 1
+2025-02-06 12:03:24,808 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,808 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 1
+2025-02-06 12:03:24,809 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,809 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 1
+2025-02-06 12:03:24,809 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 2
+2025-02-06 12:03:24,809 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,809 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 2
+2025-02-06 12:03:24,809 INFO    HandlerThread:453996 [system_monitor.py:finish():203] Stopping system monitor
+2025-02-06 12:03:24,809 DEBUG   SystemMonitor:453996 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-02-06 12:03:24,809 DEBUG   SystemMonitor:453996 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-02-06 12:03:24,822 INFO    HandlerThread:453996 [interfaces.py:finish():200] Joined cpu monitor
+2025-02-06 12:03:24,822 INFO    HandlerThread:453996 [interfaces.py:finish():200] Joined disk monitor
+2025-02-06 12:03:24,851 INFO    HandlerThread:453996 [interfaces.py:finish():200] Joined gpu monitor
+2025-02-06 12:03:24,852 INFO    HandlerThread:453996 [interfaces.py:finish():200] Joined memory monitor
+2025-02-06 12:03:24,852 INFO    HandlerThread:453996 [interfaces.py:finish():200] Joined network monitor
+2025-02-06 12:03:24,852 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,852 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 2
+2025-02-06 12:03:24,852 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 3
+2025-02-06 12:03:24,852 DEBUG   SenderThread:453996 [sender.py:send():389] send: stats
+2025-02-06 12:03:24,852 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,852 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 3
+2025-02-06 12:03:24,853 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,853 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 3
+2025-02-06 12:03:24,853 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 4
+2025-02-06 12:03:24,853 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,853 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 4
+2025-02-06 12:03:24,853 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,853 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 4
+2025-02-06 12:03:24,853 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 5
+2025-02-06 12:03:24,853 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,853 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 5
+2025-02-06 12:03:24,853 DEBUG   SenderThread:453996 [sender.py:send():389] send: summary
+2025-02-06 12:03:24,854 INFO    SenderThread:453996 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2025-02-06 12:03:24,855 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,855 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 5
+2025-02-06 12:03:24,855 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 6
+2025-02-06 12:03:24,855 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,855 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 6
+2025-02-06 12:03:24,855 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,855 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 6
+2025-02-06 12:03:24,855 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 7
+2025-02-06 12:03:24,855 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: status_report
+2025-02-06 12:03:24,855 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:24,855 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 7
+2025-02-06 12:03:24,855 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:24,855 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 7
+2025-02-06 12:03:25,655 INFO    Thread-12 :453996 [dir_watcher.py:_on_file_created():271] file/dir created: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/wandb-summary.json
+2025-02-06 12:03:25,783 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 8
+2025-02-06 12:03:25,783 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:25,783 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 8
+2025-02-06 12:03:25,784 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:25,784 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 8
+2025-02-06 12:03:25,784 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 9
+2025-02-06 12:03:25,784 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:25,784 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 9
+2025-02-06 12:03:25,784 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:25,784 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 9
+2025-02-06 12:03:25,785 INFO    SenderThread:453996 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-02-06 12:03:25,807 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:03:26,656 INFO    Thread-12 :453996 [dir_watcher.py:_on_file_modified():288] file/dir modified: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/output.log
+2025-02-06 12:03:26,657 INFO    SenderThread:453996 [dir_watcher.py:finish():388] scan: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files
+2025-02-06 12:03:26,658 INFO    SenderThread:453996 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/config.yaml config.yaml
+2025-02-06 12:03:26,658 INFO    SenderThread:453996 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/wandb-metadata.json wandb-metadata.json
+2025-02-06 12:03:26,664 INFO    SenderThread:453996 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/requirements.txt requirements.txt
+2025-02-06 12:03:26,664 INFO    SenderThread:453996 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/output.log output.log
+2025-02-06 12:03:26,665 INFO    SenderThread:453996 [dir_watcher.py:finish():402] scan save: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/wandb-summary.json wandb-summary.json
+2025-02-06 12:03:26,665 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 10
+2025-02-06 12:03:26,665 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:03:26,665 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:26,666 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 10
+2025-02-06 12:03:26,666 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:26,666 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 10
+2025-02-06 12:03:26,666 INFO    SenderThread:453996 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-06 12:03:26,807 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:03:26,808 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:03:27,046 INFO    wandb-upload_0:453996 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/config.yaml
+2025-02-06 12:03:27,077 INFO    wandb-upload_1:453996 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/requirements.txt
+2025-02-06 12:03:27,106 INFO    wandb-upload_3:453996 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/wandb-summary.json
+2025-02-06 12:03:27,110 INFO    wandb-upload_2:453996 [upload_job.py:push():130] Uploaded file /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/files/output.log
+2025-02-06 12:03:27,311 INFO    Thread-11 :453996 [sender.py:transition_state():605] send defer: 11
+2025-02-06 12:03:27,312 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:27,312 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 11
+2025-02-06 12:03:27,312 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:27,312 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 11
+2025-02-06 12:03:27,312 INFO    SenderThread:453996 [file_pusher.py:join():175] waiting for file pusher
+2025-02-06 12:03:27,313 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 12
+2025-02-06 12:03:27,313 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:27,313 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 12
+2025-02-06 12:03:27,313 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:27,313 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 12
+2025-02-06 12:03:27,313 INFO    SenderThread:453996 [file_stream.py:finish():601] file stream finish called
+2025-02-06 12:03:27,808 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:03:27,814 INFO    SenderThread:453996 [file_stream.py:finish():605] file stream finish is done
+2025-02-06 12:03:27,814 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 13
+2025-02-06 12:03:27,815 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:03:27,815 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:27,815 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 13
+2025-02-06 12:03:27,815 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:27,815 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 13
+2025-02-06 12:03:27,816 INFO    SenderThread:453996 [sender.py:transition_state():605] send defer: 14
+2025-02-06 12:03:27,816 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: defer
+2025-02-06 12:03:27,816 INFO    HandlerThread:453996 [handler.py:handle_request_defer():184] handle defer: 14
+2025-02-06 12:03:27,816 DEBUG   SenderThread:453996 [sender.py:send():389] send: final
+2025-02-06 12:03:27,817 DEBUG   SenderThread:453996 [sender.py:send():389] send: footer
+2025-02-06 12:03:27,817 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: defer
+2025-02-06 12:03:27,817 INFO    SenderThread:453996 [sender.py:send_request_defer():601] handle sender defer: 14
+2025-02-06 12:03:27,819 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:03:27,819 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: poll_exit
+2025-02-06 12:03:27,819 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: get_summary
+2025-02-06 12:03:27,819 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: sampled_history
+2025-02-06 12:03:27,819 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: internal_messages
+2025-02-06 12:03:27,820 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:03:27,820 DEBUG   SenderThread:453996 [sender.py:send_request():416] send_request: poll_exit
+2025-02-06 12:03:27,821 INFO    MainThread:453996 [wandb_run.py:_footer_history_summary_info():3975] rendering history
+2025-02-06 12:03:27,821 INFO    MainThread:453996 [wandb_run.py:_footer_history_summary_info():4007] rendering summary
+2025-02-06 12:03:27,821 INFO    MainThread:453996 [wandb_run.py:_footer_sync_info():3934] logging synced files
+2025-02-06 12:03:27,822 DEBUG   HandlerThread:453996 [handler.py:handle_request():158] handle_request: shutdown
+2025-02-06 12:03:27,822 INFO    HandlerThread:453996 [handler.py:finish():874] shutting down handler
+2025-02-06 12:03:28,820 INFO    WriterThread:453996 [datastore.py:close():296] close: /share/nas2_3/adey/full_models/wandb/run-20250206_115435-kpzgus7z/run-kpzgus7z.wandb
+2025-02-06 12:03:28,821 INFO    SenderThread:453996 [sender.py:finish():1602] shutting down sender
+2025-02-06 12:03:28,821 INFO    SenderThread:453996 [file_pusher.py:finish():169] shutting down file pusher
+2025-02-06 12:03:28,821 INFO    SenderThread:453996 [file_pusher.py:join():175] waiting for file pusher

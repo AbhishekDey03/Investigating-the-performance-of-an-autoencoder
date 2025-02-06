@@ -26,3 +26,4 @@ config: {'architecture': 'AE', 'batch_size': 4, 'image_size': 150, 'num_training
 2025-02-06 11:54:41,465 INFO    MainThread:453982 [wandb_run.py:_redirect():2376] Wrapping output streams.
 2025-02-06 11:54:41,465 INFO    MainThread:453982 [wandb_run.py:_redirect():2401] Redirects installed.
 2025-02-06 11:54:41,488 INFO    MainThread:453982 [wandb_init.py:init():911] run started, returning control to user process
+2025-02-06 12:03:28,823 WARNING MsgRouterThr:453982 [router.py:message_loop():77] message_loop has been closed

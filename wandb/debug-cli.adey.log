@@ -48,3 +48,15 @@
 	save_latents: True
 2025-02-06 11:54:31 INFO About to run command: /usr/bin/env python /share/nas2_3/adey/full_models/train_ae.py --batch_size=4 --latent_dim=8192 --learning_rate=0.0001 --num_hiddens=256 --num_residual_hiddens=32 --num_residual_layers=2 --save_latents=True
 2025-02-06 11:54:36 INFO Running runs: ['kpzgus7z']
+2025-02-06 12:03:35 INFO Cleaning up finished run: kpzgus7z
+2025-02-06 12:03:36 INFO Agent received command: run
+2025-02-06 12:03:36 INFO Agent starting run with config:
+	batch_size: 4
+	latent_dim: 8192
+	learning_rate: 0.0002
+	num_hiddens: 256
+	num_residual_hiddens: 32
+	num_residual_layers: 2
+	save_latents: True
+2025-02-06 12:03:36 INFO About to run command: /usr/bin/env python /share/nas2_3/adey/full_models/train_ae.py --batch_size=4 --latent_dim=8192 --learning_rate=0.0002 --num_hiddens=256 --num_residual_hiddens=32 --num_residual_layers=2 --save_latents=True
+2025-02-06 12:03:41 INFO Running runs: ['y0qur5p5']

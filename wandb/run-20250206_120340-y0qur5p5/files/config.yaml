@@ -1,0 +1,77 @@
+wandb_version: 1
+
+architecture:
+  desc: null
+  value: AE
+batch_size:
+  desc: null
+  value: 4
+image_size:
+  desc: null
+  value: 150
+num_training_updates:
+  desc: null
+  value: 10000
+learning_rate:
+  desc: null
+  value: 0.0002
+latent_dim:
+  desc: null
+  value: 8192
+num_hiddens:
+  desc: null
+  value: 256
+num_residual_layers:
+  desc: null
+  value: 2
+num_residual_hiddens:
+  desc: null
+  value: 32
+dataset_path:
+  desc: null
+  value: /share/nas2_3/adey/data/galaxy_zoo/
+wandb_dir:
+  desc: null
+  value: /share/nas2_3/adey/astro/wandb/
+save_dir:
+  desc: null
+  value: /share/nas2_3/adey/astro/galaxy_out/
+save_latents_path:
+  desc: null
+  value: /share/nas2_3/adey/astro/latents/
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.6
+    cli_version: 0.18.5
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1738843420
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 51
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 51
+      - 53
+      - 55
+      3:
+      - 16
+      - 23
+      - 37
+      4: 3.9.6
+      5: 0.18.5
+      8:
+      - 5
+      13: linux-x86_64
+save_latents:
+  desc: null
+  value: true
