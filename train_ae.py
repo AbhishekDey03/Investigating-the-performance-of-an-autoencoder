@@ -29,7 +29,7 @@ config = {
     "save_latents_path": "/share/nas2_3/adey/astro/latents/"
 }
 
-wandb.init(config=config, project="autoencoder_compression", entity="deya-03-the-university-of-manchester")
+wandb.init(config=config, project="comparing_models", entity="deya-03-the-university-of-manchester")
 
 # Load Dataset
 transform = torch.nn.Sequential(

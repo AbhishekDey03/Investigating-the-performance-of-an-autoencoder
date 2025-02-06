@@ -46,6 +46,7 @@ rm "$temp_file"
 
 if [[ -z "$SWEEP_PATH" ]]; then
   echo "Error: Sweep ID not found. Please check your configuration."
+  cat "$temp_file" 
   exit 1
 fi
 
