@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from residual import ResidualBlock,ResidualStack
 class Encoder(nn.Module):
-    def __init__(self, num_hiddens, num_residual_layers, num_residual_hiddens, latent_dim, variant='VAE'):
+    def __init__(self, num_hiddens, num_residual_layers, num_residual_hiddens, latent_dim, variant='AE'):
         """
         variant: 'AE', 'VAE', or 'VQ-VAE' - determines how to process latent space
         """
@@ -15,7 +15,12 @@ class Encoder(nn.Module):
         self.conv3 = nn.Conv2d(num_hiddens, num_hiddens, kernel_size=3, stride=1, padding=1)
         self.residual_stack = ResidualStack(num_hiddens, num_residual_layers, num_residual_hiddens)
 
-        if variant == 'VAE':
+        # Compression MLP for AE (small latent vector)
+        if variant == 'AE':
+            self.latent_dim = latent_dim
+            self.flatten = nn.Flatten()
+            self.fc_mu = nn.Linear(num_hiddens * 38 * 38, latent_dim)
+        elif variant == 'VAE':
             self.pre_latent_conv = nn.Conv2d(num_hiddens, 2 * latent_dim, kernel_size=1, stride=1)
         else:
             self.pre_latent_conv = nn.Conv2d(num_hiddens, latent_dim, kernel_size=1, stride=1)
@@ -25,11 +30,17 @@ class Encoder(nn.Module):
         x = F.relu(self.conv2(x))
         x = self.conv3(x)
         x = self.residual_stack(x)
-        x = self.pre_latent_conv(x)
 
-        if self.variant == 'VAE':
+        if self.variant == 'AE':
+            x = self.flatten(x)
+            x = self.fc_mu(x)  # Compress to a low-dimensional vector
+            return x
+
+        elif self.variant == 'VAE':
+            x = self.pre_latent_conv(x)
             mean, logvar = torch.chunk(x, 2, dim=1)
             return mean, logvar
         else:
-            return x
+            return self.pre_latent_conv(x)
+
  
