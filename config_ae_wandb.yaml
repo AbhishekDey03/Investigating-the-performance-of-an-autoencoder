@@ -9,17 +9,17 @@ metric:
 method: grid
 parameters:
   latent_dim:
-    values: [32, 64, 128]  
+    values: [8192, 4096, 2048] 
   num_hiddens:
-    values: [128, 256]
+    values: [256]
   num_residual_layers:
-    values: [2, 3]
+    values: [2]
   num_residual_hiddens:
-    values: [32, 64]
+    values: [32]
   learning_rate:
     values: [0.0001, 0.0002, 0.0005]
   batch_size:
-    values: [4, 8]  
+    values: [4]  
   save_latents:
     values: [True]  
 

@@ -13,17 +13,17 @@ parameters:
   num_hiddens:
     values: [128, 256]
   num_residual_layers:
-    values: [2, 3]
+    values: [2]
   num_residual_hiddens:
-    values: [32, 64]
+    values: [32]
   num_embeddings:
-    values: [256, 512]
+    values: [256]
   commitment_cost:
-    values: [0.25, 0.5]
+    values: [0.25]
   learning_rate:
     values: [0.0001, 0.0002, 0.0005]
   batch_size:
-    values: [4, 8]  
+    values: [4]  
   save_latents:
     values: [True]  
 
