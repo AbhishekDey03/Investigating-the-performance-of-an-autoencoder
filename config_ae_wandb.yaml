@@ -1,6 +1,6 @@
 project: comparing_models
 entity: deya-03-the-university-of-manchester
-program: /share/nas2_3/adey/astro/clean_code/train_vae.py
+program: /share/nas2_3/adey/astro/clean_code/train_ae.py
 
 metric:
   name: train/total_loss_per_100
@@ -9,7 +9,7 @@ metric:
 method: grid
 parameters:
   latent_dim:
-    values: [64, 128, 256]  
+    values: [32, 64, 128]  
   num_hiddens:
     values: [128, 256]
   num_residual_layers:
@@ -27,3 +27,4 @@ max_runs: 50
 
 parameter_constraints:
   - "(latent_dim * log2(latent_dim)) <= 3072"
+``

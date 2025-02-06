@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=vae_training
+#SBATCH --job-name=ae_training
 #SBATCH --constraint=A100
 #SBATCH --time=10-23
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
-#SBATCH --output=/share/nas2_3/adey/w_c_21_Oct/test_output/.out/vae_train_%j.log
-#SBATCH --error=/share/nas2_3/adey/w_c_21_Oct/test_output/.err/vae_train_%j.err
+#SBATCH --output=/share/nas2_3/adey/w_c_21_Oct/test_output/.out/ae_train_%j.log
+#SBATCH --error=/share/nas2_3/adey/w_c_21_Oct/test_output/.err/ae_train_%j.err
 #SBATCH --mem=1500GB
 
 # Display GPU status
@@ -32,8 +32,8 @@ python --version
 /share/nas2_3/adey/.venv/bin/python --version
 
 # Define paths
-PYTHON_SCRIPT="/share/nas2_3/adey/astro/clean_code/train_vae.py"
-SWEEP_CONFIG="/share/nas2_3/adey/astro/clean_code/config_vae_wandb.yaml"
+PYTHON_SCRIPT="/share/nas2_3/adey/astro/clean_code/train_ae.py"
+SWEEP_CONFIG="/share/nas2_3/adey/astro/clean_code/config_ae_wandb.yaml"
 
 # Initialize wandb sweep
 temp_file=$(mktemp)

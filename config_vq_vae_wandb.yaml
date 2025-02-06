@@ -1,6 +1,6 @@
 project: comparing_models
 entity: deya-03-the-university-of-manchester
-program: /share/nas2_3/adey/astro/clean_code/train_vae.py
+program: /share/nas2_3/adey/astro/clean_code/train_vqvae.py
 
 metric:
   name: train/total_loss_per_100
@@ -16,6 +16,10 @@ parameters:
     values: [2, 3]
   num_residual_hiddens:
     values: [32, 64]
+  num_embeddings:
+    values: [256, 512]
+  commitment_cost:
+    values: [0.25, 0.5]
   learning_rate:
     values: [0.0001, 0.0002, 0.0005]
   batch_size:
