@@ -1,6 +1,6 @@
 project: comparing_models
 entity: deya-03-the-university-of-manchester
-program: /share/nas2_3/adey/astro/clean_code/train_ae.py
+program: /share/nas2_3/adey/full_models/train_ae.py
 
 metric:
   name: train/total_loss_per_100

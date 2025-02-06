@@ -13,7 +13,7 @@
 nvidia-smi
 
 # Set up WandB environment variables
-export WANDB_API_KEY=$WANDB_API_KEY  # Uses stored key from environment
+export WANDB_API_KEY="ae52e426af96ba6657d73e9829e28ac8891914d6"
 export WANDB_PROJECT="comparing_models"
 export WANDB_ENTITY="deya-03-the-university-of-manchester"
 
@@ -32,8 +32,8 @@ python --version
 /share/nas2_3/adey/.venv/bin/python --version
 
 # Define paths
-PYTHON_SCRIPT="/share/nas2_3/adey/astro/clean_code/train_vqvae.py"
-SWEEP_CONFIG="/share/nas2_3/adey/astro/clean_code/config_vqvae_wandb.yaml"
+PYTHON_SCRIPT="/share/nas2_3/adey/full_models/train_vqvae.py"
+SWEEP_CONFIG="/share/nas2_3/adey/full_models/config_vqvae_wandb.yaml"
 
 # Initialize wandb sweep
 temp_file=$(mktemp)
